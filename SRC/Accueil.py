@@ -7,10 +7,6 @@ st.set_page_config(page_title="Accueil",
                    page_icon=":wine_glass:",
                    layout='wide')
 
-#Importation image accueil
-#image = Image.open('C:/Users/murai/OneDrive/Bureau/DATA/Datathon2/Logo_Emmaüs_Connect.png')
-#st.image(image)
-
 # Initialisation du fond d'écran
 import base64
 def add_bg_from_local(image_file):
