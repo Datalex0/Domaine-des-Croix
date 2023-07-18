@@ -76,15 +76,14 @@ with col3:
     st.plotly_chart(fig3)
 
 with col4:
-    mean_points = df_pn.groupby('variety')['points'].mean().sort_values(ascending=False).head(10)
-    mean_points = mean_points.reindex(mean_points.index[::-1])
-    fig4 = px.bar(df_pn, x=mean_points.values, y=mean_points.index, color=mean_points.index, title='Top 10 des Cépages les mieux notés', width=600, height=600)
+    mean_points = df_pn['year'].value_counts()
+    fig4 = px.bar(df_pn, x=mean_points.index, y=mean_points.values, color=mean_points.values, title='Répartition des Millésimes de Pinot Noir', width=700, height=600)
     # Mise à jour des libellés des axes
-    fig4.update_layout(xaxis_title='Cépages', yaxis_title='Note moyenne')
+    fig4.update_layout(xaxis_title='Millésimes', yaxis_title='Volume de Vins')
     # Supprimer la légende
     fig4.update_layout(showlegend=False)
     # Affichage du nombre dans les barres
-    fig4.update_traces(texttemplate='%{x:.2f}', textposition='auto')
+    fig4.update_traces(texttemplate='%{y:.0f}', textposition='auto')
     st.plotly_chart(fig4)
 
 
