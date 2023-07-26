@@ -23,7 +23,7 @@ def decompress_pickle(file):
  data = bz2.BZ2File(file, 'rb')
  data = cPickle.load(data)
  return data
-df_vins = decompress_pickle('df_vins.pbz2')
+df_vins = decompress_pickle('SRC/df_vins.pbz2')
 # df_vins.dropna(subset=['year'], inplace=True)
 # st.write(df_vins['year'].isna().any())
 
