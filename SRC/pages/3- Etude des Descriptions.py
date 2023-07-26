@@ -29,10 +29,10 @@ col1, col2, col3 = st.columns(3)
 with col1:
     centered_text("dans l'ensemble des données")
     centered_text("")
-    with open("text.pkl", 'rb') as file:
+    with open("SRC/text.pkl", 'rb') as file:
         text = pickle.load(file)
     # Chargement de l'image bouteille pour créer un masque
-    bottle_mask = np.array(Image.open("pages/bouteille.jpg"))
+    bottle_mask = np.array(Image.open("SRC/pages/bouteille.jpg"))
     # Création du Wordcloud
     wordcloud = WordCloud(width=100, height=100, max_font_size=200, min_font_size=10, mask=bottle_mask)
     # Génération du wordcloud depuis la liste
@@ -42,10 +42,10 @@ with col1:
 # Afficher le deuxième wordcloud dans la deuxième colonne
 with col2:
     centered_text("uniquement pour les Pinots Noirs") 
-    with open("text_pn.pkl", 'rb') as file:
+    with open("SRC/text_pn.pkl", 'rb') as file:
         text_pn = pickle.load(file)
     # Chargement de l'image bouteille pour créer un masque
-    bottle_mask = np.array(Image.open("pages/bouteille.jpg"))
+    bottle_mask = np.array(Image.open("SRC/pages/bouteille.jpg"))
     # Création du Wordcloud
     wordcloud = WordCloud(width=100, height=100, max_font_size=200, min_font_size=10, mask=bottle_mask)
     # Génération du wordcloud depuis la liste
@@ -56,10 +56,10 @@ with col2:
 # Afficher le troisième wordcloud dans la troisième colonne
 with col3:
     centered_text("uniquement pour les vins de Bourgogne") 
-    with open("text_bg.pkl", 'rb') as file:
+    with open("SRC/text_bg.pkl", 'rb') as file:
         text_bg = pickle.load(file)
     # Chargement de l'image bouteille pour créer un masque
-    bottle_mask = np.array(Image.open("pages/bouteille.jpg"))
+    bottle_mask = np.array(Image.open("SRC/pages/bouteille.jpg"))
     # Création du Wordcloud
     wordcloud = WordCloud(width=100, height=100, max_font_size=200, min_font_size=10, mask=bottle_mask)
     # Génération du wordcloud depuis la liste
