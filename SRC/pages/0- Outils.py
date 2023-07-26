@@ -23,7 +23,7 @@ def add_bg_from_local(image_file):
     """,
     unsafe_allow_html=True
     )
-add_bg_from_local('pages/fond ecran.jpg')
+add_bg_from_local('SRC/pages/fond ecran.jpg')
 
  
 # Titre centré
