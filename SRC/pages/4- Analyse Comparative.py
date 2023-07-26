@@ -107,7 +107,7 @@ html=f"""
     """
 iframe = folium.IFrame(html=html, width=300, height=420)
 popup = folium.Popup(iframe, max_width=2650)
-icon_path = "SRC/pages/bouteille.jpg"
+icon_path = "SRC/bottle_icon.png"
 icon = folium.CustomIcon(icon_path, icon_size=(60, 60))
 folium.Marker(location=[latitude, longitude],
   popup=popup,
