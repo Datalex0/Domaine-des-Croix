@@ -107,10 +107,11 @@ html=f"""
     """
 iframe = folium.IFrame(html=html, width=300, height=420)
 popup = folium.Popup(iframe, max_width=2650)
-
+icon_path = "SRC/pages/bouteille.jpg"
+icon = folium.CustomIcon(icon_path, icon_size=(60, 60))
 folium.Marker(location=[latitude, longitude],
   popup=popup,
-  icon=folium.Icon(color="white", icon_color="red", icon="wine-bottle", prefix="fa")    
+  icon=icon
   ).add_to(m)
 
 # Taille de la map + zoom
