@@ -21,7 +21,7 @@ def decompress_pickle(file):
  data = bz2.BZ2File(file, 'rb')
  data = cPickle.load(data)
  return data
-df_pn = decompress_pickle('df_pn.pbz2')
+df_pn = decompress_pickle('SRC/df_pn.pbz2')
 
 # Explication du principe
 st.title("Principe :")
@@ -66,11 +66,11 @@ st.title('Prix des Vins aux Etats-Unis en fonction de leur Note')
 
 col_7, col_8 = st.columns(2)
 with col_7 :
-    image = Image.open('C:/Users/murai/OneDrive/Bureau/DATA/CERTIF/Lineplot prix Vins.png')
+    image = Image.open('SRC/Lineplot prix Vins.png')
     st.image(image)
     
 with col_8 :
-    image = Image.open('C:/Users/murai/OneDrive/Bureau/DATA/CERTIF/Lineplot prix PN BG.png')
+    image = Image.open('SRC/Lineplot prix PN BG.png')
     st.image(image)
 
 
